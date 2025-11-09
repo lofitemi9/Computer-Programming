@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head id="head">
+    <title>User Interaction using jQuery</title>
+    <meta name="description" content="This lesson will look at how to add basic user interactions using jQuery">
+    <!--  link js files  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/custom-js.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <section class="hero">
+      <div>
+        <h1>User Interaction using jQuery</h1>
+      </div>
+    </section>
+    <main>
+      <section class="row-1">
+        <h3>Filter the Table</h3>
+        <p><input id="myInput" type="text" placeholder="Search ..."></p>
+        <table>
+          <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+          </thead>
+          <tbody id="myTable">
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@email.ca</td>
+          </tr>
+          <tr>
+            <td>Patty</td>
+            <td>Smith</td>
+            <td>patty@email.ca</td>
+          </tr>
+          <tr>
+            <td>Ricky</td>
+            <td>Bobby</td>
+            <td>firstorlast@email.ca</td>
+          </tr>
+          <tr>
+            <td>Peter</td>
+            <td>Parker</td>
+            <td>spidy@email.ca</td>
+          </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="row-2">
+        <div id="accordian">
+          <ul>
+            <li class="active">
+              <h3><span></span> Title One</h3>
+              <div class="row">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut tincidunt risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam id venenatis tortor, a bibendum augue. Sed magna turpis, facilisis in posuere auctor, aliquam eget mauris. Integer non lectus at risus elementum auctor. Aliquam.</p>
+              </div>
+            </li>
+            <li>
+              <h3><span></span> Title Two</h3>
+              <div class="row">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut tincidunt risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam id venenatis tortor, a bibendum augue. Sed magna turpis, facilisis in posuere auctor, aliquam eget mauris. Integer non lectus at risus elementum auctor. Aliquam.</p>
+              </div>
+            </li>
+            <li>
+              <h3><span></span> Title Three</h3>
+              <div class="row">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut tincidunt risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam id venenatis tortor, a bibendum augue. Sed magna turpis, facilisis in posuere auctor, aliquam eget mauris. Integer non lectus at risus elementum auctor. Aliquam.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="carousel-container">
+        <div class="tow-3 carousel-slides">
+          <!-- Example Slides - Replace with your own images and content -->
+          <div class="carousel-slide">
+            <img src="./img/slide1.jpg" alt="Slide 1">
+          </div>
+          <div class="carousel-slide">
+            <img src="./img/slide2.jpg" alt="Slide 2">
+          </div>
+          <div class="carousel-slide">
+            <img src="./img/slide3.jpg" alt="Slide 3">
+          </div>
+          <div class="carousel-slide">
+            <img src="./img/house-hero.jpg" alt="Slide 4">
+          </div>
+        </div>
+        <div class="carousel-dots"></div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>

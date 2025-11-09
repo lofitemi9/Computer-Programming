@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding: 0 2rem;
+  background-color: #fff;
+  z-index: 100;
+}
+
+header {
+  border-bottom: 1.5px solid #e0e0e0; /*This helps differentiate where the header ends and content begins */
+}
+
+header .logo img {
+  height: 70px;
+  width: auto;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  font-family: 'Cooper Black', serif;
+}
+
+header nav ul li a {
+  color: #3a2c1a;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+/* making it interactuve on hover */
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #b85c38;
+  border-bottom: 2px solid #b85c38;
+}

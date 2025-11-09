@@ -1,0 +1,14 @@
+Create a class named
+    Rectangles
+give it two attributes
+    length: int --> at least 2
+    width: int --> at least 3
+give it 1 constructor with 2 args
+    pass the values to the setters
+add a toString to summarize the Rectangles
+add method equals to determine if the length and width of the Rectangles are the same
+
+Create another class with a main method
+    Ask the user to input the length and width of two Rectangles
+    output the summary of each Rectangles.
+    determine if both Rectangles are equal

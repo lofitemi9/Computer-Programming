@@ -1,0 +1,75 @@
+body {
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+  background: #fffbe6;
+  color: #3a2c1a;
+  margin: 0;
+  padding: 0;
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 80px; /* account for the fixed header */
+}
+h1,
+h2 {
+  font-family: 'Cooper Black', serif;
+  color: #b85c38;
+}
+.about {
+  margin-top: 0;
+  padding-top: 0;
+}
+.founders-images {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: none;
+  max-height: none;
+  overflow: hidden;
+}
+.founders-images .about-img {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  background: #f8f8f8;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 2rem 1.5rem;
+  position: relative;
+  top: -80px;
+}
+@media (max-width: 600px) {
+  .founders-images {
+    height: 60vh;
+  }
+  .founders-images .about-img {
+    height: 60vh;
+    max-height: 60vh;
+  }
+  .about-text {
+    padding: 1.2rem 0.5rem;
+    top: -30px;
+  }
+}

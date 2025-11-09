@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- add our metadata -->
+        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="description" content="This week we are using semantic elements">
+        <meta charset="utf-8">
+        <title>Week 2 | Semantic Elements</title>
+    </head>
+    <body>
+    <!-- the header element is often the first semantic element that we will use -->
+    <header>
+        <!-- this would contain my logo container -->
+        <div>
+            <p>This is a Logo</p>
+        </div>
+        <!-- site navigation -->
+        <nav>
+            <menu>
+                <Li><a href="index.html" target="_blank">New Tab</a></Li>
+                <Li><a href="index.html" target="_self">Same Tab</a></Li>
+            </menu>
+        </nav>
+    </header>
+    <!-- I am going to use a section element to define my row of content -->
+    <section>
+        <h1>I am the main heading element</h1>
+        <h2>I am a sub-heading</h2>
+    </section>
+    <!-- this element is the parent container for all the content unique to this page -->
+    <main>
+        <section>
+            <h3>I am the section title</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, velit? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, dicta.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur <mark>adipisicing elit. Deserunt, esse, nostrum.</mark> Beatae tenetur vitae voluptatum!</p>
+
+        </section>
+        <!-- add another row to contain our form -->
+        <section>
+            <form action="somephpfile.php" method="post" enctype="multipart/form-data">
+                <label>Your Name (Required)</label>
+                <br>
+                <input type="text" name="name" required>
+                <br>
+                <p><input type="email" required placeholder="Email (Required)"></p>
+                <label>Password</label>
+                <br>
+                <input type="password" name="pword" required>
+                <br>
+                <label>Pick One:</label>
+                <br>
+                <input type="radio" id="html" name="fav_lang" value="HTML">
+                <label for="html">HTML</label>
+                <br>
+                <input type="radio" id="css" name="fav_lang" value="CSS">
+                <label for="css">CSS</label>
+                <br>
+                <label>Check all that apply;</label>
+                <br>
+                <input type="checkbox" id="choice1" name="choice1" value="Choice 1">
+                <label for="choice1">Choice 1</label>
+                <br>
+                <input type="checkbox" id="choice2" name="choice2" value="Choice 2">
+                <label for="choice2">Choice 2</label>
+                <br>
+                <label>Pick a number between 1 and 10</label>
+                <br>
+                <input type="number" min="1" max="10">
+                <br>
+                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       placeholder="(123)-456-7890">
+                <br>
+                <input type="submit" value="send">
+
+            </form>
+        </section>
+    </main>
+    <!-- try to picture this as a sidebar found om the right side of the page -->
+    <aside>
+        <!-- picture this content as if it is a related product -->
+        <article>
+            <h4>Article Title</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, vel?</p>
+        </article>
+    </aside>
+    <footer>
+        <h6>I am a footer ... nothing to see here</h6>
+    </footer>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 - Positioning Example</title>
+    <style>
+        /*fixed positioning 
+        .awesome {
+            background-color: #BADA55; 
+            border-radius: 5px; 
+            max-width: 20rem; 
+            padding: 2rem 1rem; 
+            text-align:center; 
+            color: #333; 
+            position: fixed; 
+            bottom: 0; 
+            right: 0; 
+        } */ 
+
+        /* relative positioning 
+        .awesome {
+            background-color: #BADA55; 
+            border-radius: 5px; 
+            max-width: 20rem; 
+            padding: 2rem 1rem; 
+            text-align:center; 
+            color: #333; 
+            position: relative; 
+            top:10px;
+        }*/ 
+
+        /* absolute positioning 
+
+        .position {
+            height: 60vh;  
+            width: 90%; 
+            background-color: #C0FFEE; 
+            position: relative;
+        }
+
+        .awesome {
+            background-color: #BADA55; 
+            border-radius: 5px; 
+            max-width: 20rem; 
+            padding: 2rem 1rem; 
+            text-align:center; 
+            color: #333; 
+            position: absolute; 
+            bottom: 0; 
+            right: 0; 
+        }
+    
+        */ 
+
+        /* sticky positioning */ 
+
+        /*.position {
+            height: 200vh; 
+            width: 90%; 
+            background-color: #C0FFEE;
+        }
+
+        .awesome {
+            background-color: #BADA55; 
+            border-radius: 5px; 
+            max-width: 20rem; 
+            padding: 2rem 1rem; 
+            text-align:center; 
+            color: #333; 
+            position: sticky; 
+            top: 0;
+        } */
+
+
+        /* Z-Index */ 
+
+        .awesome {
+            background-color: #BADA55; 
+            border-radius: 5px; 
+            max-width: 20rem; 
+            padding: 2rem 1rem; 
+            text-align:center; 
+            color: #333; 
+            position:fixed; 
+            top: 25px;
+        }
+
+        .box-2 {
+            background-color: #C0FFEE; 
+            color: #333; 
+        }
+
+        .box-2 {
+            z-index:-1; 
+        }
+
+        .box-1 {
+            opacity: 0.5; 
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="position">
+            <p class="awesome box-1"> CSS is Awesome!</p>
+            <p class="awesome box-2"> Hello World!</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* position */
+
+h2{
+    color: purple;
+}
+
+h2{
+    color: red;
+}
+
+/*specificity*/
+
+/* .wrapper{
+    background-color: black;
+    color: white;
+}
+
+div{
+    background-color: #BADA55;
+    color: black;
+} */
+
+
+/* inheritance - not part of the cascade, but a related concept */
+
+body{
+    color: purple;
+    height: 100px;
+}

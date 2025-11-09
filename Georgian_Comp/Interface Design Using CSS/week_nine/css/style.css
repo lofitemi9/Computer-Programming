@@ -1,0 +1,240 @@
+/* 
+CSS custom properties and Variables
+*/
+
+:root {
+  --bg: #0b0c10;
+  --panel: #12151a;
+  --ink: #e8eaed;
+  --muted: #9aa0a6;
+  --brand: #4f8cff;
+  --button-bg: #222730;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --border-radius: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Base Buttons */
+.cta-button{
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: 2px solid var(--brand);
+    background-color: var(--brand);
+    color: var(--ink);
+    text-decoration-line: none;
+    color: var(--ink);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-button{
+    background: var(--button-bg);
+    border: solid;
+    border: 2px solid var(--muted);
+    color: var(--muted);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* 1. Header Section Styles */
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--sopacing-md);
+    background-color: var(--panel);
+    border-bottom: 1px solid var(--button-bg);
+    min-height: 80px;
+}
+
+/* Logo Styling */
+.site-logo{
+    text-decoration: none;
+    color: var(--brand);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* Nav component */
+.main-nav{
+    flex-grow: 1;
+    margin: 0 40px;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+.nav-list li{
+    padding: 0 vgar(--spacing-xs);
+    position: relative;
+}
+
+.nav-list a{
+    color: var(--ink);
+    font-weight: bold;
+    display: block;
+    padding: 10px var(--spacing-xs);
+}
+
+/* Dropdown Menu */
+.nav-dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: var(--panel);
+    border: 1px solid var(--button-bg);
+    min-width: 150px;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xs) 0;
+    z-index: 10;
+}
+
+.dropdown-menu a{
+    padding: 0.5rem 1rem;
+    color: var(--muted);
+}
+
+.dropdown-menu a:hover{
+    background-color: var(--button-bg);
+    color: var(--brand);   
+}
+
+/* utility components */
+.header-utility{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Responsive header */
+@media (max-width: 768px){
+    .main-header{
+        flex-direction: column;
+        align-items: center;
+        padding: var(--spacing-sm);
+    }
+
+    .main-nav{
+        flex-grow: 0;
+        margin: var(--spacing-xs) 0;
+        width: 100%;
+    }
+
+    .nav-list{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .header-utility{
+        margin-top: 10px;
+    }
+}
+
+/* The Cards */
+.content-card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--panel);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
+    /* Advanced flexbox styling */
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.card-image{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body{
+    padding: var(--spacing-sm);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body p{
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+.card-cta{
+    align-self: flex-start;
+}
+
+.card-grid{
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: var(--spacing-md);
+    max-width: 1200px;
+    margin: var(--spacing-md) auto;
+}
+
+@media (max-width: 1000px){
+    .content-card{
+        flex-basis: 40%;
+        max-width: 450px;
+    }
+}
+@media (max-width: 650px){
+    .content-card{
+        flex-basis: 100%;
+    }
+    .card-grid{
+        justify-content: center;
+        gap: var(--spacing-sm)
+    }
+}
+
+.cta-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brand);
+    padding: var(--spacing-md) 4rem;
+    margin: var(--sopacing-md) 0;
+}
+
+
+
+

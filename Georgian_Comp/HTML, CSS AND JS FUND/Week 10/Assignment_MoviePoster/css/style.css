@@ -1,0 +1,125 @@
+.poster {
+    width: 100%;
+    height: 225vh;
+    position: relative;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* The main poster image */
+.poster > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* My main header text font */
+@font-face {
+    font-family: 'Avatar';
+    src:url('../fonts/Avatar_Water.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Defining my cutom font for the h2 text */
+@font-face {
+    font-family: 'Avatar_h2';
+    src:url('../fonts/Plathorn-NorMed.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Styling the 'AVATAR' in my poster to try and be as close as i can */
+.poster>header>h1{
+    position: absolute;
+    bottom: 375px;
+    /* Dont know why it doesn't stay in the middle after setting it to 50%*/
+    left: 50%;
+    /* Bruteforcing the fix */
+    transform: translateX(-50%);
+    font-family: 'Avatar', serif;
+    font-size: 12rem;
+    background: linear-gradient(#00ffff 10%, #0070e0 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+}
+
+/* Styling 'THE WAY OF WATER' part */
+.poster>header>h2{
+    position: absolute;
+    bottom: 320px;
+    left: 51%;
+    transform: translateX(-50%);
+    font-family: 'Avatar_h2', serif;
+    font-size: 3rem;
+    background: linear-gradient(to top, #00ffff 10%, #0070e0 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+    word-spacing: 15px;
+}
+
+/* Styling the Credits */
+.credits {
+  position: absolute;
+  bottom: 150px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Impact', sans-serif;
+  font-size: 1.5rem;
+  color: #568392;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  padding: 0 30px;
+  text-shadow: rgb(0, 0, 0, 0.8);
+}
+
+.credits>span{
+    font-size: 1rem;
+}
+
+.release-date {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 4rem;
+    color: #ffffff;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.release-date>span {
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.links{
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2rem;
+}
+
+.links>a{
+    color: #00ffff;
+    text-decoration: none;
+}

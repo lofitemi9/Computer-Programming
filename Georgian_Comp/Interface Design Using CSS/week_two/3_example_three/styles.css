@@ -1,0 +1,127 @@
+/* General Styles & Reset */
+
+/* Simple CSS Reset */
+/* Strips default spacing and ensures consistent sizing across elements. */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Useful for layouts that rely on full-height sections.*/ 
+  html, body {
+    height: 100%;
+  }
+  
+
+  body {
+    line-height: 1.5;  /*  Improves text readability without needing additional spacing tweaks.*/ 
+    font-family: sans-serif; /*Replaces the browser’s default serif font with a cleaner base.*/ 
+  }
+
+/* Typography */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 5rem; 
+    color: #fff; 
+    text-align:center; 
+    position: relative; 
+    top: 35%; 
+}
+
+article p {
+    width: 25ch; 
+}
+
+
+/* Layout  & Appearance  */
+
+main {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+div.flex {
+    justify-content: space-between;
+
+}
+
+article {
+    margin-bottom: 25px;
+}
+
+
+/* Backgrounds & Images */
+
+/* PART ONE -  Working with Background and Background Images */ 
+
+header {
+    height: 50vh;
+    /*background-color*/ 
+    background: #BADA55; 
+    /*gradients*/ 
+    background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 67%, rgba(252, 176, 69, 1) 100%);
+    /* background-image*/ 
+    background-image: url('assets/pexels-sanketh-rao-716107.jpg');
+    /* controlling background repeat */ 
+    background-repeat:no-repeat; 
+    /* controlling background-size */ 
+    background-size:cover;
+    /* position the background image */ 
+    background-position: center; 
+    /* background-attachment */ 
+    background-attachment:fixed;
+    
+    
+    /*background shorthand */
+    /* A background-color may only be specified after the final comma.
+    The value of background-size may only be included immediately after background-position, separated with the '/' character, like this: center/80% */
+    background: url('assets/pexels-sanketh-rao-716107.jpg') no-repeat center/cover fixed; 
+  
+}
+
+/* PART TWO - RESPONSIVE IMAGES */ 
+
+.photo-container {
+    width: 200px; 
+    height: 150px 
+}
+
+.photo-container img {
+    max-width: 100%;
+    height:auto;
+}
+
+
+/*PART THREE - MANIPULATING IMAGES WITH CSS */
+
+.flex:nth-of-type(1) article:nth-of-type(2) img:hover {
+    /*filters */
+    /*filter: blur(2px);
+    filter: brightness(1);
+    filter: contrast(200%);*/
+    /*filter: drop-shadow(16px 16px 20px blue)
+    filter: grayscale(50%);
+    filter: hue-rotate(90deg);
+    filter: invert(75%);
+    filter: opacity(25%);
+    filter: saturate(30%);*/ 
+    filter: sepia(100%); 
+}
+
+.nothing {
+    display:none; 
+}
+
+/*Try It Out - apply filters to another image featured on the page */ 

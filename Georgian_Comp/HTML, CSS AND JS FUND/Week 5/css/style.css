@@ -1,0 +1,121 @@
+body{
+    margin: 0px;
+    background-color: #f8f8f8;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Poppins", sans-serif;
+}
+p,a,li,figcaption{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* header */
+header{
+    display: flex;
+    height: 150px;
+    background-color: #f8f8f8;
+    /* center my content along the cross axis  */
+    align-items: center;
+}
+header>div{
+    height: 145px;
+    width: auto;
+    flex-grow: 1;
+}
+header>div>a>img{
+    width: auto;
+    height: 100%;
+}
+header>nav>menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+header>nav>menu>li{
+    padding: 0px 10px;
+
+}
+header>nav>menu>li>a{
+    color:black;
+}
+/* masthead / hero image */
+.lesson-masthead{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #8338ec;
+}
+.lesson-masthead> h1{
+    color: #f8f8f8;
+    font-size: 58px;
+}
+/* main content container (the div that holds the main and aside) */
+.flex-content.container{
+    display: flex;
+}
+main{
+    width: 75%;
+}
+main>section{
+    display: flex;
+    padding: 2%;
+    align-items: center;
+}
+main>section>div{
+    width: 50%;
+    padding: 10px;
+}
+main>section>div>img{
+    width: 100%;
+    height: auto;
+}
+aside{
+    width: 25%;
+    padding: 2% 0;
+    background-color: #ececec;
+}
+aside>article{
+    width: 90%;
+    margin: 15px auto;
+    text-align: center;
+}
+aside>article>figure{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+aside>article>figure>img{
+    width: 100%;
+    height: auto;
+}
+footer{
+    display: flex;
+    align-items: center;
+}
+footer>div{
+    width:25%
+}
+footer>div>a>img{
+    width:auto;
+    height:250px;
+}
+footer>div+div{
+    width:50%
+}
+footer>div+div+div{
+    width: 25%;
+}
+footer>div+div+div>form{
+    width: 90%;
+    height: auto;
+}
+footer>div+div+div>form>p{
+    width: 100%;
+}
+footer>div+div+div>form>p>input{
+    width: 100%;
+    border: solid 2px #0e0e0e;
+}

@@ -1,0 +1,32 @@
+Style Guide
+    No Hypens or Underscores allowed to be used in variable/function names
+    Spaces are not allowed in variable/function names
+    Variables/functions cannot start with a number
+    No special Characters
+    .Import must be the first executable statement
+    All Variable names must be meaningful and relevant to the the variable
+
+Comments
+
+    Comment in each section of code
+
+    HEADER
+        --------------------
+        # Name: Temiloluwa Shokunbi
+        # Student Number: 200632787
+        # Date: 
+        # Time: 
+        # Description: 
+        --------------------
+
+COURSE DONTS
+    While True is not allowed
+
+
+
+EXAM - 
+    Notes Must be Handwritten
+    Note can only be written on one side of the paper
+    The size of the papaer is a quarter of an 81/2 by an 11 inch sheet of paper
+    its 1/4th of an A4 Paper
+

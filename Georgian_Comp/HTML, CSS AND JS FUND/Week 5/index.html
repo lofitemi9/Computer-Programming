@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Flexbox Layout</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header>
+    <div>
+        <a href="index.html"><img src="./img/logo.png" alt="header logo"></a>
+    </div>
+    <nav>
+        <menu>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </menu>
+    </nav>
+</header>
+
+<section class="lesson-masthead">
+    <h1>Layouts using CSS Flexbox</h1>
+</section>
+
+<div class="flex-content container">
+    <main>
+        <!-- 2 column row -->
+        <section>
+            <div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident iste quos nobis eos voluptates recusandae vero obcaecati.</p>
+            </div>
+            <div>
+                <img src="./img/image-1.jpg" alt="image-1">
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <img src="./img/image-2.jpg" alt="image-2">
+            </div>
+            <div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente eius quasi nam illo molestiae quod!</p>
+            </div>
+        </section>
+
+        <!-- six column row -->
+        <section>
+            <div><img src="./img/image-3.jpg" alt="image-3"></div>
+            <div><img src="./img/image-4.jpg" alt="image-4"></div>
+            <div><img src="./img/image-5.jpg" alt="image-5"></div>
+            <div><img src="./img/image-six.jpg" alt="image-6"></div>
+            <div><img src="./img/image-1.jpg" alt="image-1"></div>
+            <div><img src="./img/image-2.jpg" alt="image-2"></div>
+        </section>
+    </main>
+
+    <aside>
+        <article>
+            <figure>
+                <img src="./img/image-3.jpg" alt="image-3">
+                <figcaption>Laboris ullamco quis excepteur culpa ea labore Lorem deserunt nulla deserunt esse anim...</figcaption>
+            </figure>
+        </article>
+    </aside>
+</div>
+
+<footer>
+    <!-- logo -->
+    <div>
+        <a href="index.html"><img src="./img/logo.png" alt="footer logo"></a>
+    </div>
+
+    <!-- text -->
+    <div>
+        <h6>Footer Title</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque reprehenderit iste quidem expedita cum laudantium quibusdam, dignissimos ab nostrum explicabo, ipsa nulla mollitia a ipsam, similique nobis ut minima. Laboriosam.<p>
+    </div>
+
+    <!-- form -->
+    <div>
+        <form method="post" action="somefile">
+            <p><input type="text" name="name" placeholder="Your Name"></p>
+            <p><input type="email" name="email" placeholder="Your Email"></p>
+            <p><textarea placeholder="Your Message"></textarea></p>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</footer>
+
+</body>
+</html>

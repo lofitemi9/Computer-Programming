@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Week 3 | Media and CSS</title>
+        <meta name="description" content="Week 3 Class on CSS">
+        <meta name="robots" content="noindex, nofollow">
+        <!-- add our css file-->
+        <link rel ="stylesheet" href="./CSS/style.css">
+    </head>
+    <body>
+        <header>
+            <!--I am using a div as the logo container because there is mo semantic elementr for logos-->
+            <div>
+                <a href="index.html">
+                    <img src="./IMG/logo.png" alt="Logo Image">                      
+                </a>
+            </div>
+            <nav>
+                <menu>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#images">Images</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                </menu>
+            </nav>
+        </header>    
+        <!--add or main element to contain our main content for this page-->
+        <main>
+            <section class="lesson-masthead">
+                <div>
+                    <h1>Working with Media & CSS</h1>
+                </div>
+            </section>
+            <section id="Images">
+                <!--Our first example will be a plain image-->
+                <h3>Plain Image</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati voluptatem esse exercitationem vero asperiores. Voluptate error quo, voluptatem optio inventore eius voluptates nemo magnam nam ipsam fugit qui esse repellat?</p>
+                <img src="./IMG/image-1.jpg" alt="Some image">
+                <!--Our next example will be a figure and figcaption-->
+                <h3>Our image with a figcaption</h3>
+                <figure>
+                    <img src="./IMG/image-2.jpg" alt="image two">
+                    <figcaption>Veniam velit laborum commodo irure ad magna nisi.</figcaption>
+                </figure>
+            </section>
+            <section id="Videos">
+                <!--Our first Video will be an iframe from Youtube-->
+                <!--next we will add an HTML Video, I will be only using one file type this is to keep our file size down on blackboard-->
+                <h3>Video with an iframe</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/r0xTqwKMOyk?si=7dPsiuhacVxZBrAV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </section>
+            
+
+        </main>    
+    </body>
+</html>

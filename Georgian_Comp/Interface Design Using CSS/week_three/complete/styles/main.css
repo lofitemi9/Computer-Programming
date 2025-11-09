@@ -1,0 +1,182 @@
+/*locally-hosted fonts*/
+/* this should typically be at the beginning of the stylesheet */
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../assets/OpenSans-Regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+    /* reset root element font size */
+    font-size: 62.5%;
+    /* equivalent to 10px, easier to work with */
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Layout */
+.container {
+    background-color: #eaeaea;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+article {
+    padding: 3rem;
+    width: 65%;
+    background-color: #F5F5DC;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+}
+
+article img {
+    float: left;
+    padding-right: 3rem;
+    max-height: 400px;
+    max-width: 100%;
+    filter: sepia(100%);
+}
+
+article img:hover {
+    filter: sepia(0%)
+}
+
+footer {
+    clear: left;
+    background-color: #654321;
+    color: #fff;
+    padding-bottom: 1.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+nav {
+    padding: 2.5em;
+    text-align: center;
+    padding: 2em;
+    font-family: 'robotoregular', sans-serif;
+}
+
+
+nav a {
+    color: #56382E;
+    text-decoration: none;
+    /* font-size */
+    padding: 2em 0;
+    margin-right: 2em;
+}
+
+nav a:visited {
+    color: #71503A;
+}
+
+nav a:focus {
+    border: 1px dotted #71503A;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a:active {
+    border: 1px dotted #F5F5DC;
+}
+
+/*---------Web Typography------------ */
+
+/* STEP ONE -  set font size, line-height, line-length */
+
+h1 {
+    font-size: 6rem;
+    color: #472A28;
+    text-align: center;
+    font-weight: 400;
+    font-family: "Eater", serif;
+}
+
+h2 {
+    color: #A3795B;
+    font-size: 4.5rem;
+    text-align: center;
+    font-family: "Henny Penny", sans-serif;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 3.5rem;
+}
+
+h5 {
+    font-size: 3rem;
+    /* equivalent to 30px */
+}
+
+h6 {
+    font-size: 2.5rem;
+}
+
+p,
+figcaption,
+a {
+    max-width: 75ch;
+    font-size: 1.8rem;
+    font-family: "OpenSans", sans-serif;
+}
+
+figcaption {
+    text-align: right;
+    font-weight: bold;
+}
+
+figure {
+    padding: 2em;
+    margin: 2em 0;
+    background-color: #C6AB80;
+}
+
+p {
+    text-indent: 2rem;
+}
+
+blockquote p {
+    font-size: 2.5rem;
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 0;
+    letter-spacing: 0.10rem;
+}
+
+/*STEP TWO - USING CUSTOM WEB FONTS */
+
+
+
+
+
+
+/* externally hosted fonts */
+
+
+/** STEP THREE - LET'S MAKE IT RESPONSIVE **/
+
+h1 {
+    font-size: clamp(4rem, 6vw, 10rem); 
+}

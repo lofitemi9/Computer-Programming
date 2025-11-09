@@ -1,0 +1,166 @@
+/* Q2 Starter — Web Fonts + Fluid Typography + Dashboard Layout
+
+Tasks: 
+
+1.) Define & apply colours using CSS variables and var() 
+2.) Load and apply a custom font
+3.) Create layout navigation with Flexbox & create a sticky navbar 
+4.) Create a flexible, fluid grid layout for cards without media queries 
+5.) Ensure CSS is efficient, well-formatted and valid */
+
+:root {
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --radius: .75rem;
+
+  --header: 2.5rem;
+  --body: 1rem;
+  
+/* i add my custom contrasted colors here */
+  --color-bg: #FFFFFF;
+  --color-heading: #B89E97;
+  --color-text: #000000;
+  --color-cards: #F0F0F0;
+
+}
+
+/* text size */
+h1{
+  font-size: var(--header);
+}
+p{
+  font-size: var(--body);
+  font-family: 'Caprasimo', cursive;
+  line-height: 1.5;
+}
+
+/* 2) Base */
+* {
+  box-sizing: border-box;;
+}
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline-offset: 2px;
+}
+
+
+/* here i make my sticky header following the style rules */
+/* 3) Header — Flex nav */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2);
+  /* sticky header */
+  position: sticky;
+  top: 0;
+  background: var(--color-heading);
+  /* slight effect for shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .06);  
+  /* setting z index so the sticky header is always on top */
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: var(--step-1);
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--space-2);
+  /* setting the custom font in the nav */
+  font-family: 'Bitcount Grid Single', sans-serif;
+}
+
+.nav-link {
+  padding: .25rem .5rem;
+  border-radius: .375rem;
+}
+
+.cta-btn {
+  padding: .5rem .75rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* 4) Hero */
+.hero {
+  padding: 2rem;
+  /* setting the custom font in the hero */
+  font-family: 'Caprasimo', cursive;
+}
+
+.hero .lead {
+  max-width: 68ch;
+}
+
+/* 5) Grid — Courses */
+.page {
+  /* ensuring the page takes up the full width so the grid can take up a little less */
+  width: 100%;
+}
+
+.content-grid {
+  /* creating my grid layout here */
+  width: 90%;
+  margin: 0 auto;
+  padding: var(--space-3) 0;
+  padding-bottom: 100px;
+  /* creating the grid layout */
+  display: grid;
+  gap: var(--space-3);
+  grid-auto-rows: auto;
+  /* ensuring its dynamic */
+  grid-template-columns: repeat(auto-fill, minmax(350px, 2fr));
+}
+
+/* 6) Cards */
+.card {
+  background-color: var(--color-cards);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+  transition: box-shadow .12s ease, transform .12s ease;
+  min-width: 150px;/* making the cards a set size for consistency*/
+  min-height: 150px;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
+}
+
+.card-title {
+  margin: .5rem 0 .25rem;
+}
+
+.site-footer {
+  background-color: var(--color-heading);
+  padding: var(--space-2);
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="This lesson will look at user interaction using JavaScript & jQuery">
+  <meta name="robots" content="noindex, nofollow">
+  <title>JavaScript & jQuery Interaction Examples</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- When using jQuery you must import the library so you can use it. Forget this and none of your jQuery will work. -->
+  
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sunuwar&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>JavaScript & jQuery User Interaction Examples</h1>
+  </header>
+  <main>
+    <section id="js">
+      <h2>JavaScript Examples</h2>
+    </section>
+    <!-- 1. Greet the User -->
+    <section>
+      <h2>1. Greet the User (Vanilla JS)</h2>
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <button id="greetBtn">Greet Me</button>
+      <p id="greetingOutput"></p>
+    </section>
+    <!-- 2. Background Color Changer -->
+    <section>
+      <h2>2. Change Background Color (Vanilla JS)</h2>
+      <button id="changeBgBtn">Change Background</button>
+    </section>
+    <!-- 3. Character Counter -->
+    <section>
+      <h2>3. Character Counter (Vanilla JS)</h2>
+      <textarea id="textArea" rows="4" placeholder="Type something..."></textarea>
+      <p id="charCount">Characters: 0</p>
+    </section>
+    <section id="jq">
+      <h2>jQuery Examples</h2>
+    </section>
+    <!-- 4. Counter -->
+    <section>
+      <h2>4. Counter (jQuery)</h2>
+      <p>Count: <span id="jqueryCounter">0</span></p>
+      <button id="jqueryInc">Increase</button>
+      <button id="jqueryDec">Decrease</button>
+    </section>
+    <!-- 5. Toggle Message -->
+    <section>
+      <h2>5. Toggle Message (jQuery)</h2>
+      <button id="toggleBtn">Toggle Message</button>
+      <p id="jqMessage" class="hidden">🎉 jQuery toggled me!</p>
+    </section>
+  </main>
+  <footer>
+    <h6>Here Is Some Filler Content</h6>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis possimus tenetur labore iusto laudantium, fugit sapiente. Accusamus, deleniti nesciunt. Delectus quas ex veniam molestias labore.</p>
+  </footer>
+</body>
+</html>

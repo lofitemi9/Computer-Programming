@@ -1,0 +1,101 @@
+body{
+    margin: 0px;
+    background-color: #f8f8f8;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Poppins", sans-serif;
+}
+p,a,figcaption,li,td,blockquote{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px; /*1.2em*/ 
+     text-decoration: none;
+}
+body{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    'header header header header'
+    'hero hero hero hero'
+    'main main main aside'
+    'footer footer footer footer';
+}
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    background-color: #f8f8f8;
+    height: 125px;
+}
+header div{
+width: auto;
+height: 115px;
+}
+header img{
+    width: auto;
+    height: 100%;
+}
+header menu{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
+    margin: 0;
+}
+header menu a{
+    color: #0e0e0e;
+}
+.lesson-masthead{
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #8338ec;
+}
+.lesson-masthead h1{
+    color: #f8f8f8;
+    font-size: 58px;
+}
+main{
+    grid-area: main;
+}
+main > section{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 2%;
+}
+main > section > div{
+    padding: 15px;
+}
+main > section > div > img{
+    width: 100%;
+    height: auto;
+}
+main > section + section + section{
+    grid-template-columns: repeat(6, 1fr);
+}
+aside{
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: #ececec;
+}
+aside article{
+    width: 90%;
+    margin: auto;
+    height: auto;
+}
+aside article img{
+    width: 100%;
+    height: auto;
+    
+}
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+

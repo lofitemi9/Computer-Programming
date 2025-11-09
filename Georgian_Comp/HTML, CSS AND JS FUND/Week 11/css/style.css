@@ -1,0 +1,186 @@
+body{margin: 0px;}
+h1,h2,h3,h4,h5,h6,th{font-family: "Poppins", sans-serif;}
+p,a,li,td{
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 115px;
+  padding: 10px 0;
+  align-items: center;
+  background-color: #fffffb;
+  z-index: 9999;
+}
+
+header div{
+  width: auto;
+  height: 100%;
+  flex-grow: 1;
+}
+
+header div img{
+  width: auto;
+  height: 100%;
+}
+
+header menu{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header menu li{
+  padding: 0 10px;
+}
+
+header menu li a{
+  color: #0e0e0e;
+}
+
+.hero{
+  background-image: url("../img/house-hero.jpg");
+  background-size:cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero div{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero div div{
+  font-size: 5em;
+  color: #fffffb;
+}
+
+.row-1{
+  padding: 2% 5%;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, tr{
+  border: solid 2px #dddddd;
+  text-align: center;
+  padding: 8px;
+  font-size: 1.2em;
+}
+
+tr:nth-child(even){
+  background-color: #dddddd;
+
+}
+
+.row-2{
+  padding: 2% 5%;
+}
+
+#accordian li{
+ list-style: none;
+}
+
+#accordian h3{
+    font-size: 1.2em;
+  line-height: 55px;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #999999;
+  margin-bottom: 8px;
+  background-color: #f8f8f8;
+}
+
+#accordian h3 span{
+  background-image: url("../img/logo.png");
+  background-size: cover;
+  width: 35px; 
+  height: 35px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+#accordian .row{
+  margin: 0;
+  background: #ffffff;
+  transition: all .25s linear;
+  display: none;
+}
+
+#accordian li.active .row{
+  display: block;
+}
+
+#accordian li.active h3{
+  background-color: #e6e6e6;
+  color: #b4a078;
+}
+
+.carousel-container{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #fff;
+}
+
+.carousel-slides{
+  display: flex;
+  transition: transfrom 0.5s ease-in-out;
+}
+
+.carousel-slide{
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.carousel-slide img{
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.carousel-dots{
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5em;
+  z-index: 10;
+}
+
+.carousel-dots{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  /* clip-path: circle(50%); */
+  cursor: pointer;
+  background-color: rgba(255, 255,  255, .5);
+  transition: background-color .3s ease, transform .3s ease; 
+}
+
+.carousel-dot.active{
+  background-color: #3b82f6;
+  transform: scale(1.2);
+}

@@ -1,0 +1,120 @@
+body{
+    background-color: #ffffff;
+    margin: 0px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: sans-serif;
+}
+
+p,a,li,td,figcaption{
+    font-family: sans-serif;
+    font-size: 1.2em; /*that equals 20px*/
+}
+
+/* we are going to target our header now, this will be 2 columns. */
+header{
+    height: 125px;
+    background-color: #f8f8f8f8;
+}
+
+header > div{
+width: auto;
+height: 125px;
+float: left;
+} 
+
+header > div > a >img{
+    width: auto;
+    height: 100%;
+}
+
+header > nav{
+    float: right;
+}
+
+header > nav > menu{
+    list-style: none;
+    margin: 0 px;
+    padding-top: 45px;
+}
+
+header > nav > menu > li{
+    float: left;
+    padding: 10px;
+}
+
+header > nav > menu > li > a{
+    color: #0e0e0e;
+}
+
+main > section{
+    background-color: #072d67;
+    padding: 5%;
+}
+
+main > section > h1,
+main > section > p{
+    color: #f8f8f8;
+
+}
+
+main > section + section{
+    background-color: #f8f8f8;
+    clear: both;
+}
+
+main > section + section > div{
+   float: left;
+   width: 45%;
+   padding: 2%;
+}
+
+main > section + section + section{
+    clear: both;
+    background-color: #f8f8f8;
+}
+
+main > section + section + section > div{
+    float: left;
+    width: 45%;
+    padding-top: 10%;
+}
+
+main > section + section + section  > div + div{
+    float: right;
+    width: 48%;
+    padding: 0px;
+}
+
+main > section + section + section > div + div > img{
+    width: 100%;
+    height: auto;
+}
+
+main > section + section + section + section{
+    clear: both;
+    background-color: #0e0e0e;
+}
+
+main > section + section + section + section > div{
+    width: 33.33%;
+    float: left;
+    padding: 0px;
+
+}
+
+main > section + section + section + section > div > img{
+    width: 100%;
+    height: auto;
+}
+
+footer{
+    background-color: #0e0e0e;
+    padding: 5%;
+    text-align: center;
+}
+
+footer > h6{
+    color: #f8f8f8;
+}

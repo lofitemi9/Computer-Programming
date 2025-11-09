@@ -1,0 +1,74 @@
+Fighting Game
+
+2 Players
+
+Each Player
+    name
+    health
+    strength
+
+1 player will attack another player
+    other players health decreases by attacking players strength
+
+Continues until one player no longer has any health remaining
+
+
+
+_______________________
+Fighter
+_______________________
+attributes
+name: string -  ( - : Private || + : Public)
+strength: int -
+health: int -
+
+_______________________
+actions
+getName(): String +
+setName(name: String): void +
+
+getStrength(): int +
+setStrength(strength: int): void +
+
+getHealth(): int +
+setHealth(health: int): int +
+
+attack(victim: Fighter): void +
+
+_______________________
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+Using Java create a form that stores
+    firstname
+    lastname
+    age
+    height
+    weight
+
+validate this form so that names are at least 3 chars
+age, height, weight are natural numbers
+
+_______________________
+Form
+_______________________
+attributes
+firstname: String -
+lastname: String -
+age: int -
+height: double -
+weight: double -
+
+_______________________
+actions
+getter and setter * 5
+submit/validate(): void +
+_______________________

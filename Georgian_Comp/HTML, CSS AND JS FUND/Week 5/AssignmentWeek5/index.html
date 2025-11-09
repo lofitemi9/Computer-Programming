@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Assignment 2 | Order A Pizza</title>
+        <meta name="description" content="This is Assignment 2 where I had to make a website to order a pizza.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- link to my css -->
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <!-- Logo Image -->
+            <div>
+                <a href="index.html"><img src="./img/pizza-logo.png" alt="Logo"></a>
+            </div>
+            <nav>
+                <!-- Menu that only leads to the home page -->
+                <menu>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">About Us</a></li>
+                </menu>
+            </nav>
+        </header>
+
+        <main>
+            <section class="main-text">
+                <div>
+                    <h1>----------PLACE YOUR ORDER NOW----------</h1>
+                </div>
+            </section>
+            
+            <section>
+                <div class="image-element">
+                    <!-- stock image of a pizza -->
+                    <img src="./img/Stock-Pizza.png" alt="Pizza Image">
+                </div>
+            </section>
+
+            <!-- this is the start of my form section to actually order the pizza -->
+                <section class="form-section">
+                    <form action="somefile.php">
+
+                        <!-- Customer Information -->
+                        <h3>Customer Information</h3>
+
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+
+                
+                        
+
+                        <!-- Pizza Selection -->
+                        
+                        <h3>Pizza Details</h3>
+
+                        <label for="number">Number of Pizzas:</label>
+                        <input type="number" id="number" name="number" min="1" max="10" value="1">
+
+                        <label for="size">Size:</label>
+                        <select id="size" name="size">
+                            <option value="small">Small</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="large">Large</option>
+                            <option value="extra-large">Extra Large</option>
+                        </select>
+
+                        <p>Crust Type:</p>
+                        <label><input type="radio" name="crust" value="thin" checked> Thin Crust</label>
+                        <label><input type="radio" name="crust" value="thick"> Thick Crust</label>
+                        <label><input type="radio" name="crust" value="stuffed"> Stuffed Crust</label>
+
+                        <p>Toppings:</p>
+                        <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+                        <label><input type="checkbox" name="toppings" value="mushrooms"> Mushrooms</label>
+                        <label><input type="checkbox" name="toppings" value="onions"> Onions</label>
+                        <label><input type="checkbox" name="toppings" value="olives"> Olives</label>
+                        <label><input type="checkbox" name="toppings" value="bacon"> Bacon</label>
+                        <label><input type="checkbox" name="toppings" value="pineapple"> Pineapple</label>
+
+
+                        <label for="instructions">Special Instructions:</label>
+                        <!-- i dont know if setting the rows to 4 is inline css but it looks good anyways -->
+                        <textarea name="instructions" id="instructions" rows="4" placeholder="Any special requests?"></textarea>
+
+
+                        <!-- Delivery Method -->
+                        <h3>Delivery</h3>
+                        <label><input type="radio" name="delivery" value="pickup" checked>Pickup<img src="./img/Pickup.png" alt="Pickup Logo"></label>
+                        <label><input type="radio" name="delivery" value="delivery">Delivery <img src="./img/delivery.png" alt="Delivery Logo"></label>
+
+                        <label for="address">Address (if delivery):</label>
+                        <input type="text" id="address" name="address" placeholder="idk where you live">
+
+
+
+
+                        <!-- Submit -->
+                        <button type="submit">Place Order</button>
+                                </form>
+                        </section>
+
+                      
+
+        </main>
+             <!-- Footer -->
+              <footer>
+                <section>
+                     <div>
+                        <h5>CONTACT US</h5>
+                        <p>bestpizza@pizza.com</p>
+                        <h6>this assignment took way too long</h6>
+                    </div>
+                </section>
+               
+              </footer>
+    </body>
+</html>

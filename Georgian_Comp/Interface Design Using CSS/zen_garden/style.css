@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Cormorant+Garamond:wght@400;600&display=swap");
+/* custom fonts are cormorant garamond and playfair display */
+
+/* Palette (i checked the contrast with WebAIM) */
+:root {
+	--brown-saddle: #8b4513;
+	--gold-wood: #c19a6b;
+	--paper: #faf6ee;
+	--ink: #1a120b;
+
+	/* Links */
+	--link: #c12323;
+	--link-hover: #5eff00;
+
+	--gap: 10px;
+	--pad: 20px;
+}
+
+h1,
+h2,
+p {
+	color: var(--paper);
+}
+
+/* Base */
+body {
+	margin: 0;
+	font: 1rem/1.6 "Cormorant Garamond", Georgia, "Times New Roman", serif;
+	background-image: url("wood.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.page-wrapper,
+#zen-intro,
+.sidebar>.wrapper,
+#zen-supporting {
+	color: var(--ink);
+	border: 1px solid var(--brown-saddle);
+	padding: var(--pad);
+	border-radius: 8px;
+}
+
+/* Headings */
+h1,
+h2 {
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+	margin: 0 0 var(--gap);
+}
+
+/* Descendant selector */
+.intro h1 {
+	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Attribute selector */
+a[title] {
+	text-decoration: underline;
+}
+
+.summary,
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+	size: 1rem;
+	color: var(--gold-wood);
+}
+
+.page-wrapper a,
+#zen-intro a,
+.sidebar a,
+#zen-supporting a {
+	color: var(--link);
+}
+
+.page-wrapper a:hover,
+#zen-intro a:hover,
+.sidebar a:hover,
+#zen-supporting a:hover {
+	color: var(--link-hover);
+}
+
+/* Cool drop cap effect i learnt */
+#zen-summary p:first-of-type::first-letter {
+	font-family: "Playfair Display";
+	font-size: 2.2rem;
+	float: left;
+	padding-right: 6px;
+	color: var(--paper);
+}
+
+/* Child combinator */
+.sidebar>.wrapper {
+	background: var(--paper);
+}
+
+/* Adjacent sibling */
+h3+p {
+	background: rgba(193, 154, 107, 0.2);
+	padding: 6px 10px;
+	border-radius: 6px;
+	margin-top: 0;
+}
+
+/* General sibling */
+.explanation h3~p {
+	border-left: 3px solid rgba(139, 69, 19, 0.4);
+	padding-left: 10px;
+}
+
+/* Spacing */
+p,
+li {
+	margin-bottom: var(--gap);
+}

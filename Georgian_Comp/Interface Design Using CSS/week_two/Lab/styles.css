@@ -1,0 +1,162 @@
+ /* =============================================================
+       STUDENT TASKS
+       1.) Pick a Coolors palette and define: --base, --text, --secondary, --primary, --accent using CSS variables 
+       2.) Implement background image in .hero and add parallax-like effect
+       3.) Apply colours using CSS variables & var( )
+       4.) Ensure WCAG AA contrast
+    ============================================================= */
+
+ /* 1. set theme colours */
+:root{
+    --base-color: #F8FAFC;
+    --text-color: #D9EAFD;
+    --secondary-color: #BCCCDC;
+    --primary-color: #9AA6B2;
+    --accent-color: #0A0A0A;
+}
+
+ /* Base reset */
+ *,
+ *::before,
+ *::after {
+     box-sizing: border-box;
+ }
+
+
+ h1,h2,h3,h4,h5,h6,p{
+    color: var(--text-color);
+    text-align: center;
+ }
+
+ .btn{
+  background-color: var(--secondary-color);
+  color: var(--base-color);
+  border: none; 
+  padding: 0.5em 1em; 
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+
+main{
+    background : url(./img/winter-bg.jpg) no-repeat center/cover fixed;
+    filter: drop-shadow(2px);
+    background-position: fixed;
+    background-size: cover;
+}
+
+
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+     line-height: 1.5;
+ }
+
+ /* Accessibility base */
+ a {
+     text-decoration: none;
+ }
+
+ a:focus-visible,
+ button:focus-visible {
+     outline-offset: 2px;
+ }
+
+ img {
+     max-width: 100%;
+     height: auto;
+ }
+
+ .skip-link {
+     position: absolute;
+     left: -999px;
+     top: auto;
+     width: 1px;
+     height: 1px;
+     overflow: hidden;
+ }
+
+ .skip-link:focus {
+     position: static;
+     width: auto;
+     height: auto;
+     padding: .5rem;
+     background: #000;
+     color: #fff;
+ }
+
+ /* Base layout only */
+ header {
+    background-color: var(--base-color);
+    background-attachment:fixed;
+    position: sticky;
+     top: 0;
+     z-index: 10;
+ }
+
+ .nav {
+     max-width: 1100px;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: .75rem 1rem;
+ }
+
+ .nav a {
+    color: var(--accent-color);
+     padding: .5rem .75rem;
+     border-radius: .5rem;
+ }
+
+ .hero {
+     min-height: 60vh;
+     display: grid;
+     place-items: center;
+     text-align: center;
+     padding: 6rem 1rem 4rem;
+ }
+
+ .hero h1 {
+     font-size: clamp(2rem, 4vw + 1rem, 4rem);
+     margin: 0 0 .5rem;
+ }
+
+ .hero p {
+     max-width: 60ch;
+     margin: 0 auto 1.25rem;
+ }
+
+ .btn {
+     display: inline-block;
+     padding: .8rem 1.1rem;
+     border-radius: .75rem;
+     font-weight: 600;
+ }
+
+ .highlights {
+     max-width: 1100px;
+     margin: 2.5rem auto;
+     padding: 1rem;
+     display: grid;
+     gap: 1rem;
+     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ }
+
+ .card {
+     padding: 1rem;
+     border-radius: 1rem;
+ }
+
+ .card h3 {
+     margin-top: 0;
+ }
+
+ footer {
+     padding: 2rem 1rem;
+     text-align: center;
+ }

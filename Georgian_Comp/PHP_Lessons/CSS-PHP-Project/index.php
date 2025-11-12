@@ -10,7 +10,7 @@ include __DIR__ . '/inc/header.php';
 <!-- hero section -->
 <section class="hero">
     <div class="hero-content">
-        <h1>Find Your Next Favorite Thing</h1>
+        <h1>Shop Quality Teddy Bears</h1>
         <p>Quality goods, fair prices, fast shipping. Browse our latest arrivals.</p>
         <a class="btn" href="<?= $base ?>/templates/shop.php">Shop New Arrivals</a>
     </div>

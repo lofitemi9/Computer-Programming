@@ -24,10 +24,9 @@ include __DIR__ . '/../inc/header.php';
 </section>
 
 <!-- product grid (static placeholders) -->
-<section class="grid grid-3 product-grid container">
+<section class="grid grid-3 container">
     <?php for ($i = 1; $i <= 9; $i++): ?>
         <article class="card">
-            <!-- replicates the card -->
             <img src="<?= $base ?>/img/placeholder-<?= ($i % 3) + 1 ?>.jpg" alt="Product placeholder <?= $i ?>">
             <h3>Product Title <?= $i ?></h3>
             <p>$00.00</p>

@@ -1,0 +1,253 @@
+/* ----------  BASIC SETTINGS  and RESET ---------- */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --muted: #555555;
+  --border: #e5e5e5;
+  --header-bg: #000000;
+  --footer-bg: #000000;
+  --radius: 8px;
+  --transition: all 0.3s ease;
+  --font-main: "Poppins", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --header-h: 12vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ----------  CONTAINER---------- */
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+/* ----------  HEADER AREA  ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-h);
+  background: var(--header-bg);
+  color: #fff;
+  border-bottom: 1px solid #222;
+  z-index: 1000;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.brand span {
+  color: #ccc;
+}
+
+/* navigation links */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-list a {
+  color: #bbb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-list a:hover,
+.nav-list a.active {
+  color: #fff;
+}
+.nav-list .auth .btn {
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* push teh content below fixed header */
+.site-main {
+  flex: 1;
+  margin-top: var(--header-h);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------  HERO SECTION  ---------- */
+.hero {
+  height: 90vh;
+  background: url("../img/hero.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+.hero p {
+  color: #ddd;
+  margin: 1rem 0 2rem;
+}
+.btn {
+  background: #fff;
+  color: #000;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.btn:hover {
+  background: #ccc;
+}
+
+/* ----------  GRID / PRODUCT CARDS  ---------- */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 3rem;
+}
+.card {
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.card h3 {
+  margin: 1rem;
+}
+.card p {
+  color: var(--muted);
+  margin: 0 1rem 1rem;
+}
+
+/* ----------  FORMS / SIGN/REG PAGES / CONTACT  ---------- */
+form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 400px;
+}
+input,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  background: #f8f8f8;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #888;
+}
+button {
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+button:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* ----------  CENTER PAGE CONTENT (for shorter pages)  ---------- */
+.auth-page .site-main,
+.contact-page .site-main,
+.about-page .site-main {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ----------  FOOTER SECTION  ---------- */
+.site-footer {
+  background: var(--footer-bg);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #222;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* ----------  RESPONSIVE  ---------- */
+@media (max-width: 800px) {
+  .nav-list {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  .hero {
+    height: 70vh;
+  }
+}

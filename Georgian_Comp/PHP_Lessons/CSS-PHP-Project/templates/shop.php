@@ -10,7 +10,7 @@ include __DIR__ . '/../inc/header.php';
 <!-- this is the search function -->
 <section class="container" style="padding-top:1rem;">
     <form class="filters" role="search" style="display:flex; gap:1rem; flex-wrap:wrap;">
-        <input type="search" placeholder="Search products…" aria-label="Search products" style="flex:1; min-width:220px;">
+        <input type="search" placeholder="Search products" aria-label="Search products" style="flex:1; min-width:220px;">
         <select aria-label="Category">
             <option>All Categories</option>
             <option>Best Sellers</option>

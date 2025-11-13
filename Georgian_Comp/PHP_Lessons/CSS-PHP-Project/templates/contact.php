@@ -1,7 +1,4 @@
 <?php
-/* contact page
-   centered content (body class)
-*/
 $base = '/Georgian_Comp/PHP_Lessons/CSS-PHP-Project';
 $bodyClass = 'contact-page';
 include __DIR__ . '/../inc/header.php';

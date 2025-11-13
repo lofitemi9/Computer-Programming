@@ -1,7 +1,4 @@
 <?php
-/* login page
-   centered content (body class)
-*/
 $base = '/Georgian_Comp/PHP_Lessons/CSS-PHP-Project';
 $bodyClass = 'auth-page';
 include __DIR__ . '/../inc/header.php';

@@ -1,7 +1,4 @@
 <?php
-/* shop page
-   keep top-aligned (body class)
-*/
 $base = '/Georgian_Comp/PHP_Lessons/CSS-PHP-Project';
 $bodyClass = 'shop-page';
 include __DIR__ . '/../inc/header.php';

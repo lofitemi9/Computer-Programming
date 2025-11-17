@@ -1,0 +1,16 @@
+/* ---------------------------------------------------------------------- */
+/* CSS Variables for a clean color palette (The "Why": Maintainability) */
+/* ---------------------------------------------------------------------- */
+/* The :root selector targets the highest-level element (the HTML tag), 
+   making these custom properties (variables) available globally throughout the stylesheet. 
+   This is done for easy **maintainability** and **consistency**. To change the primary 
+   brand color everywhere, you only have to edit one line here. */
+:root {
+    --primary-color: #10b981; /* Emerald: Used for key accents, links, and interactive elements. */
+    --secondary-color: #3b82f6; /* Blue: Used for secondary accents or differentiation. */
+    --background-light: #f3f4f6; /* Light gray: Default page background color. */
+    --text-dark: #1f2937; /* Dark gray: Used for main headings and primary text. */
+    --text-medium: #4b5563; /* Medium gray: Used for paragraph text. */
+    --text-faded: #6b7280; /* Lighter gray: Used for subtext or less important info. */
+    --code-background: #f0f0f0; /* Light code background. */
+}

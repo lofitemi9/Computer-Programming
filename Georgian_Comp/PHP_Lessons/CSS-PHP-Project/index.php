@@ -41,3 +41,4 @@ include __DIR__ . '/inc/header.php';
 </section>
 
 <?php include __DIR__ . '/inc/footer.php'; ?>
+

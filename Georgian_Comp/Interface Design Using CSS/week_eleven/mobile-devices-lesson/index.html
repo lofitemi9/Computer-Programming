@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Design: A Pure CSS Lesson (No Inline Styles)</title>
+    <meta name="description" content="This lesson will look at how to tackle adaptive layouts">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Load Font Awesome for Icons (a standard external library) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css"> 
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Adaptive Design: A Pure CSS Lesson</h1>
+      <p>Putting Flexbox, Grid, Media Queries, and modern CSS to practice—without frameworks.</p>
+    </header>
+    <!-- MODULE 1: Adaptive Units & Clip-Path Enhancement -->
+    <section class="lesson-section">
+      <div class="clip-path-hero">
+        <h2>1. Fluid Typography & Clip-Path</h2>
+          <p>We're using the viewport width unit (<span class="inline-code">vw</span>) to scale the heading font size.</p>
+          <h3 class="fluid-heading">Fluid <span>Scaling</span></h3>
+      </div>   
+      <div class="module-content">
+        <h3 class="module-subheading">CSS Units: rem, vw, and the Clip-Path Trick</h3>
+          <div class="intro-grid">
+            <div>
+              <p class="module-paragraph">Relative Units:<code class="inline-code">rem</code> is great for text. <code class="inline-code">vw</code> (viewport width) is used above to make the heading scale directly with the browser width.</p>
+              <p class="module-paragraph">Clip-Path: This advanced property creates complex shapes. Here, it creates a custom, sharp diagonal edge at the bottom of the dark header section.</p>
+            </div>
+          <div>
+          <div class="code-block">
+            <span class="code-comment">/* Using vw for fluid scaling on the H3 */</span>
+            <span class="code-selector">.fluid-heading</span> {
+            <span class="code-property">font-size</span>: <span class="code-value">8vw</span>;}
+            <span class="code-comment">/* Defines the sharp, custom shape (Clip-Path) */</span>
+            <span class="code-selector">.clip-path-hero</span> {
+            <span class="code-property">clip-path</span>: <span class="code-value">polygon(0 0, 100% 0, 100% 90%, 0% 100%)</span>;}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- MODULE 2: Flexbox & Hover Effects -->
+  <section class="lesson-section">
+    <div class="module-content">
+      <h2 class="module-title">2. Flexbox for Card Layouts & Hover Interactivity</h2>
+      <p class="module-paragraph mb-large">Flexbox handles the alignment and wrapping of the cards. We're using custom CSS for a slick lift and glow effect on hover.</p>
+      <div class="card-flex-container">
+        <!-- Card 1 (Flex Item) -->
+        <div class="interactive-card">
+          <div class="icon"><i class="fas fa-arrows-alt-h"></i></div>
+            <h3>One-Dimensional Flow</h3>
+            <p>Flexbox organizes items in a single row or column. Try resizing the window to see the cards wrap!</p>
+          </div>
+          <!-- Card 2 (Flex Item) -->
+          <div class="interactive-card">
+            <div class="icon"><i class="fas fa-redo-alt"></i></div>
+              <h3>Content Reordering</h3>
+              <p>Use the <code class="inline-code">order</code> property to change the visual sequence of items independently of the source HTML.</p>
+            </div>
+            <!-- Card 3 (Flex Item) -->
+            <div class="interactive-card">
+              <div class="icon"><i class="fas fa-mountain"></i></div>
+                <h3>Hover Effects</h3>
+                <p>This card uses a CSS <code class="inline-code">transition</code>, <code class="inline-code">transform: translateY()</code>, and custom <code class="inline-code">box-shadow</code> defined in the <code class="inline-code">style</code> block.</p>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- MODULE 3: CSS Grid & Media Queries -->
+    <section class="lesson-section">
+      <div class="module-content">
+        <h2 class="module-title">3. CSS Grid for Responsive 2D Layouts</h2>
+        <p class="module-paragraph mb-large">This layout is built **Mobile-First** (1 column) and switches to 3 columns using an explicit **Media Query** at 768px.</p>
+        <!-- Grid Container -->
+        <div class="responsive-grid">      
+          <div class="grid-item blue-item col-span-2">
+            <h3>Header / Wide Content</h3>
+            <p>On desktop (> 768px), this item uses <code class="inline-code">grid-column: span 2</code> to cover two columns.</p>
+          </div>
+          <div class="grid-item green-item">
+            <h3>Sidebar 1</h3>
+            <p>One column wide on all screen sizes.</p>
+          </div>
+          <div class="grid-item yellow-item">
+            <h3>Sidebar 2</h3>
+            <p>One column wide on all screen sizes.</p>
+          </div>
+          <div class="grid-item red-item col-span-2">
+            <h3>Footer / Full Width</h3>
+            <p>This item also spans two columns on desktop, creating a balanced bottom row with the remaining column.</p>
+          </div>
+        </div>             
+        <h3 class="module-subheading mt-large">The Responsive Grid Code</h3>
+        <div class="code-block">
+          <span class="code-comment">/* Mobile First Default: All items stack (1 column) */</span>
+          <span class="code-selector">.responsive-grid</span> {
+            <span class="code-property">display</span>: <span class="code-value">grid</span>;
+            <span class="code-property">grid-template-columns</span>: <span class="code-value">1fr</span>;
+          }
+          <span class="code-comment">/* Media Query for Tablet/Desktop (>= 768px) */</span>
+          <span class="code-selector">@media (min-width: 768px)</span> {
+            <span class="code-selector">.responsive-grid</span> {
+            <span class="code-property">grid-template-columns</span>: <span class="code-value">repeat(3, 1fr)</span>; <span class="code-comment">/* 3 equal columns */</span>
+          }
+          <span class="code-selector">.col-span-2</span> {
+            <span class="code-property">grid-column</span>: <span class="code-value">span 2 / span 2</span>;
+          }
+        }
+      </div>
+    </div>
+  </section>
+
+        <!-- MODULE 4: Art Direction with <picture> Element -->
+        <section class="lesson-section">
+            <div class="module-content">
+                <h2 class="module-title">4. Advanced: Art Direction with &lt;picture&gt;</h2>
+                <p class="module-paragraph mb-large">The <code class="inline-code">&lt;picture&gt;</code> element allows us to serve **different images** for different screen sizes. This is crucial when simple scaling is not enough (e.g., cropping a wide banner to a zoomed-in detail on mobile).</p>
+
+                <div class="picture-demo-container">
+                    <picture>
+                        <!-- Source for desktop (min-width 768px): wide, contextual image -->
+                        <source media="(min-width: 768px)" srcset="https://placehold.co/800x300/3b82f6/ffffff?text=Desktop+Source+(Wide+Ratio)">
+                        <!-- Source for mobile (default): zoomed or vertical image -->
+                        <img class="responsive-media" src="https://placehold.co/400x500/10b981/ffffff?text=Mobile+Source+(Cropped+Detail)" alt="A responsive image demonstrating art direction">
+                    </picture>
+                </div>
+
+                <h3 class="module-subheading">The Code in Action</h3>
+                <div class="code-block">
+<span class="code-comment">/* The browser uses the first matching source, falling back to <img> */</span>
+&lt;picture&gt;
+  &lt;source <span class="code-property">media</span>="<span class="code-value">(min-width: 768px)</span>" <span class="code-property">srcset</span>="<span class="code-value">desktop-wide.jpg</span>"&gt;
+<span class="code-comment">/* The mobile default image */</span>
+  &lt;img <span class="code-property">src</span>="<span class="code-value">mobile-crop.jpg</span>" <span class="code-property">alt</span>="<span class="code-value">Art Directed Image</span>"&gt;
+&lt;/picture&gt;
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer>
+            <p class="footer-text">Resize your browser window now to see all four adaptive techniques in action!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

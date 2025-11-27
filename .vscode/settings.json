@@ -1,5 +1,6 @@
 {
     "livePreview.defaultPreviewPath": "/Learn Online/HTML.CSS/2.2 Paragraph Element/index.html",
     "explorer.sortOrder": "modified",
-    "wolf.disableHotModeWarning": true
+    "wolf.disableHotModeWarning": true,
+    "docwriter.style": "Auto-detect"
 }

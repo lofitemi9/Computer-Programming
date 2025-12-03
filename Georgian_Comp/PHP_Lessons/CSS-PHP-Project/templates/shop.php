@@ -1,35 +1,62 @@
 <?php
-$base = '/Georgian_Comp/PHP_Lessons/CSS-PHP-Project';
+// templates/shop.php
+// Public product listing page – shows every bear currently in the DB.
+
+$base = '/~Temiloluwa200632787/CSS-PHP-Project';
 $bodyClass = 'shop-page';
+
+require_once __DIR__ . '/../conf/database.php';
+$pdo = db();
+
+// grab all products newest-first so the latest stuff shows up at the top
+$stmt = $pdo->query('SELECT * FROM products ORDER BY created_at DESC');
+$products = $stmt->fetchAll();
+
 include __DIR__ . '/../inc/header.php';
 ?>
 
-<!-- this is the search function -->
-<section class="container" style="padding-top:1rem;">
-    <form class="filters" role="search" style="display:flex; gap:1rem; flex-wrap:wrap;">
-        <input type="search" placeholder="Search products" aria-label="Search products" style="flex:1; min-width:220px;">
-        <select aria-label="Category">
-            <option>All Categories</option>
-            <option>Best Sellers</option>
-        </select>
-        <select aria-label="Sort by">
-            <option>Sort: Featured</option>
-            <option>Sort: Price (Low → High)</option>
-            <option>Sort: Price (High → Low)</option>
-        </select>
-    </form>
-</section>
+<main class="site-main">
+    <section class="container">
+        <header class="page-header">
+            <h1 class="page-title">Shop Teddy Bears</h1>
 
-<!-- product grid (static placeholders) -->
-<section class="grid grid-3 container">
-    <?php for ($i = 1; $i <= 9; $i++): ?>
-        <article class="card">
-            <img src="<?= $base ?>/img/placeholder-<?= ($i % 3) + 1 ?>.jpg" alt="Product placeholder <?= $i ?>">
-            <h3>Product Title <?= $i ?></h3>
-            <p>$00.00</p>
-            <button class="btn">Add to Cart</button>
-        </article>
-    <?php endfor; ?>
-</section>
+            <p class="page-subtitle">
+                Browse all available bears. I update this whenever I add new ones :)
+            </p>
+        </header>
+
+        <!-- grid of products coming straight from the database -->
+        <section class="product-list">
+            <?php if ($products): ?>
+                <?php foreach ($products as $product): ?>
+                    <article class="product-card">
+                        <img
+                            src="<?= $base ?>/img/products/<?= htmlspecialchars($product['image']) ?>"
+                            alt="<?= htmlspecialchars($product['title']) ?>"
+                        >
+                        <div class="product-card-body">
+                            <h2><?= htmlspecialchars($product['title']) ?></h2>
+
+                            <p class="product-price">
+                                $<?= number_format($product['price'], 2) ?>
+                            </p>
+
+                            <a
+                                class="button button-outline"
+                                href="<?= $base ?>/templates/product.php?id=<?= $product['id'] ?>"
+                            >
+                                View Details
+                            </a>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p class="empty-state">
+                    No products are live yet. Check back soon or bug the admin to add some bears :)
+                </p>
+            <?php endif; ?>
+        </section>
+    </section>
+</main>
 
 <?php include __DIR__ . '/../inc/footer.php'; ?>

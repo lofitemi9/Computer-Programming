@@ -25,8 +25,21 @@ petType = petArray[Math.floor(Math.random() * petArray.length)]
 //Collect petName from nameField
 petName = document.querySelector("#nameField")
 
+// Check if petName has been submitted
+let submitNameField = document.querySelector("#submitName")
+submitNameField.addEventListener("click", function () {
+    updateUI();
+});
+
 // Collect hunger checkbox
 isHungry = document.querySelector("#hungryField");
+
+// Check if hunger status has been submitted 
+let submitHungerField = document.querySelector("#submitHunger")
+submitHungerField.addEventListener("click", function () {
+    updateUI();
+});
+
 
 // These are the fields where output is gonna go
 let petNameField = document.querySelector("#petName");
@@ -42,8 +55,6 @@ function updateUI() {
     petHungerField.textContent = "Your pet is hungry: " + isHungry.checked;
 }
 
-
-
 // creating the petAge system to either increase or decrease the pets Age
     // assigning the button to values
     const increasePetAge = document.querySelector('#increaseAgeField');
@@ -53,16 +64,16 @@ function updateUI() {
     increasePetAge.addEventListener("click", function () {
         // updating age to increase by 1 when button clicked
         petAge += 1;
-        petAgeField.textContent = "Your Pets Age is: " + petAge;
         console.log(petAge)
+        updateUI();
 
     });
         // updating age to decrease by 1 when button clicked
     decreasePetAge.addEventListener("click", function () {
         if (petAge > 0) {
-            petAge -= 1;
-            petAgeField.textContent = "Your Pets Age is: " + petAge;
-            console.log(petAge) } 
+            petAge -= 1;}
+        console.log(petAge) 
+        updateUI()
     })
 
 // Show information content

@@ -54,12 +54,34 @@ let petAgeField = document.querySelector("#petAge");
 let petTypeField = document.querySelector("#petType");
 let petHungerField = document.querySelector("#petHunger");
 
+// connecting the petDescription to the html
+let petDescriptionField = document.querySelector('#petDescription')
+
 // defining a function that updates the pet info on the page
 function updateUI() {
     petNameField.textContent = "Your Pets Name is: " + petName.value;
     petAgeField.textContent = "Your Pets Age is: " + petAge;
     petTypeField.textContent = "Your Pet is a: " + petType;
     petHungerField.textContent = "Your pet is hungry: " + isHungry.checked;
+
+    // updates pet description every time the info is updated
+    let hungerLine = '';
+
+    if (isHungry.checked == true) {
+        hungerLine = "Also... " + petName.value + " is HUNGRY. Snack time before chaos begins.";
+    } else {
+        hungerLine = petName.value + " is not hungry, so it’s pure vibes and good behavior (for now).";
+    }
+
+    petDescriptionField.textContent =
+        "Meet " + petName.value + " a " + petAge + " year-old " + petType +
+        " with main-character energy. Right now " + petName.value +
+        " is feeling " + mood + " and its #1 hobby is " + favouriteActivities + ". " +
+        hungerLine +
+        " If you see " + petName.value + " around, expect " + petName.value +
+        " to start " + favouriteActivities + " immediately.";
+
+    
 }
 
 // creating the petAge system to either increase or decrease the pets Age
@@ -82,11 +104,6 @@ function updateUI() {
         console.log(petAge) 
         updateUI()
     })
-
-
-// Pet description Section
-let petDescriptionField = document.querySelector('#petDescription')
-petDescriptionField.textContent = "“Meet" + petName + ", a 3-year-old " + petType + " who loves flying and is currently feeling excited!”"
 
 // Show information content
     updateUI()

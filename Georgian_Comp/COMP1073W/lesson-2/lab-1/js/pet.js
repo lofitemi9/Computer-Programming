@@ -16,6 +16,13 @@ petAge = Math.floor(Math.random() * 15) + 1
 // Initialize moodArray
 let moodArray = ['Happy', 'Sleepy', 'Exicted', 'Grumpy'];
 
+// initialize favouriteActivities array
+let favouriteActivitiesArray = ['Playing catch', 'Running', 'Playing in the rain']
+
+// Select a random favouriteActivity from the array
+
+favouriteActivities = favouriteActivitiesArray[Math.floor(Math.random() * favouriteActivitiesArray.length)]
+
 //Select a random mood from the array
 mood = moodArray[Math.floor(Math.random() * moodArray.length)]
 
@@ -76,8 +83,15 @@ function updateUI() {
         updateUI()
     })
 
+
+// Pet description Section
+let petDescriptionField = document.querySelector('#petDescription')
+petDescriptionField.textContent = "“Meet" + petName + ", a 3-year-old " + petType + " who loves flying and is currently feeling excited!”"
+
 // Show information content
     updateUI()
+
+
 
 
 

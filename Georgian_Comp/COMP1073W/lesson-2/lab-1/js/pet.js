@@ -19,6 +19,31 @@ let moodArray = ['Happy', 'Sleepy', 'Exicted', 'Grumpy'];
 //Select a random mood from the array
 mood = moodArray[Math.floor(Math.random() * moodArray.length)]
 
+//Select a random Type from petArray
+petType = petArray[Math.floor(Math.random() * petArray.length)]
+
+//Collect petName from nameField
+petName = document.querySelector("#nameField")
+
+// Collect hunger checkbox
+isHungry = document.querySelector("#hungryField");
+
+// These are the fields where output is gonna go
+let petNameField = document.querySelector("#petName");
+let petAgeField = document.querySelector("#petAge");
+let petTypeField = document.querySelector("#petType");
+let petHungerField = document.querySelector("#petHunger");
+
+// defining a function that updates the pet info on the page
+function updateUI() {
+    petNameField.textContent = "Your Pets Name is: " + petName.value;
+    petAgeField.textContent = "Your Pets Age is: " + petAge;
+    petTypeField.textContent = "Your Pet is a: " + petType;
+    petHungerField.textContent = "Your pet is hungry: " + isHungry.checked;
+}
+
+
+
 // creating the petAge system to either increase or decrease the pets Age
     // assigning the button to values
     const increasePetAge = document.querySelector('#increaseAgeField');
@@ -28,6 +53,7 @@ mood = moodArray[Math.floor(Math.random() * moodArray.length)]
     increasePetAge.addEventListener("click", function () {
         // updating age to increase by 1 when button clicked
         petAge += 1;
+        petAgeField.textContent = "Your Pets Age is: " + petAge;
         console.log(petAge)
 
     });
@@ -35,10 +61,17 @@ mood = moodArray[Math.floor(Math.random() * moodArray.length)]
     decreasePetAge.addEventListener("click", function () {
         if (petAge > 0) {
             petAge -= 1;
+            petAgeField.textContent = "Your Pets Age is: " + petAge;
             console.log(petAge) } 
     })
 
 // Creating Basic UI to show information content
+    petNameField.textContent = "Your Pets Name is: " + petName.value;
+    petAgeField.textContent = "Your Pets Age is: " + petAge;
+    petTypeField.textContent = "Your Pet is a: " + petType;
+    petHungerField.textContent = "Your pet is hungry: " + isHungry.checked;
+
+
 
 
 

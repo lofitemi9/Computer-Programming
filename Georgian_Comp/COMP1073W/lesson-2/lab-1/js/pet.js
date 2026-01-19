@@ -65,11 +65,8 @@ function updateUI() {
             console.log(petAge) } 
     })
 
-// Creating Basic UI to show information content
-    petNameField.textContent = "Your Pets Name is: " + petName.value;
-    petAgeField.textContent = "Your Pets Age is: " + petAge;
-    petTypeField.textContent = "Your Pet is a: " + petType;
-    petHungerField.textContent = "Your pet is hungry: " + isHungry.checked;
+// Show information content
+    updateUI()
 
 
 

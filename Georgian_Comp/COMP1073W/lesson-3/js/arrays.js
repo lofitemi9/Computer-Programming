@@ -3,16 +3,37 @@ const output = document.querySelector('body p:nth-of-type(2)');
 /* STEP 1: Creating an array
 When declaring and initializing an array, you can include strings, numbers, booleans, and even other arrays */
 
+let myArray = ['string',25,true,[10,20,30]]
+output.textContent = myArray;
+
 /* STEP 2: Reading and changing array elements
 You can refer to a particular element in an array with it's index number */
+
+output.textContent = myArray[2];
+output.textContent = myArray[3][1];
 
 // You can also change a particular element
 
 // An array within an array is called a multidimensional array - it can be accessed by specifying the index of the first array, then the item within it
 /* STEP 3: Determining array length
 Being able to figure out how many elements are contained in an array is a critical feature of JavaScript programming */
+output.textContent = myArray.length;
 
 // In particular, looping through arrays
+
+for(let i=0; i<myArray.length; i++){
+    console.log(myArray[i])
+    output.textContent +=', ' + myArray[i]
+}
+
+// forEach loop : is an array method used to execute a function once for each element in an array
+
+myArray.forEach(function(item){
+    console.log(item);
+    output.textContent += ', ' + item;
+});
+
+// Arrow function : is a shorter to write a function in JS
 
 /* STEP 4: Convert a string to an array
 If there is a common character that can act as a delimiter in a string, we can use this character to create an array */

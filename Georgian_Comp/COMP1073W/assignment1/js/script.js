@@ -23,6 +23,9 @@ const storyText = document.getElementById("storyText");
 
 const resetBtn = document.getElementById("resetBtn");
 
+const audioToggle = document.getElementById("audioToggle");
+
+
 
 
 function updateUI() {
@@ -39,12 +42,28 @@ function buildStory() {
 
 function showStory(text) {
   storyText.textContent = text;
+  if (audioToggle.checked) {
+    speak(text);
+  }
 }
+
 
 
 function cycleIndex(current, length) {
   return (current + 1) % length;
 }
+
+function speak(text) {
+  if (!("speechSynthesis" in window)) return;
+
+  window.speechSynthesis.cancel();
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.rate = 1;
+  utter.pitch = 1;
+  utter.volume = 1;
+  window.speechSynthesis.speak(utter);
+}
+
 
 btn1.addEventListener("click", () => {
   i1 = cycleIndex(i1, part1.length);
@@ -78,8 +97,12 @@ tellStoryBtn.addEventListener("click", () => {
 resetBtn.addEventListener("click", () => {
   i1 = 0; i2 = 0; i3 = 0; i4 = 0; i5 = 0;
   updateUI();
+
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+
   storyText.textContent = "Click the buttons to build a story…";
 });
+
 
 
 updateUI();

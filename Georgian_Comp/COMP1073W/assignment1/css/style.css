@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fb;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.parts button,
+.controls button {
+  padding: 10px 15px;
+  margin: 6px 6px 6px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #f0f0f0;
+}
+
+.controls {
+  margin-top: 15px;
+}
+
+.output {
+  margin-top: 20px;
+  background: #fff2b8;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+#storyText {
+  font-size: 1.1rem;
+}

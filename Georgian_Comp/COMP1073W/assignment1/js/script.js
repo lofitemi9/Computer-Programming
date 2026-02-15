@@ -21,6 +21,9 @@ const btn5 = document.getElementById("btn5");
 const tellStoryBtn = document.getElementById("tellStoryBtn");
 const storyText = document.getElementById("storyText");
 
+const resetBtn = document.getElementById("resetBtn");
+
+
 
 function updateUI() {
   val1.textContent = part1[i1];
@@ -71,5 +74,12 @@ btn5.addEventListener("click", () => {
 tellStoryBtn.addEventListener("click", () => {
   showStory(buildStory());
 });
+
+resetBtn.addEventListener("click", () => {
+  i1 = 0; i2 = 0; i3 = 0; i4 = 0; i5 = 0;
+  updateUI();
+  storyText.textContent = "Click the buttons to build a story…";
+});
+
 
 updateUI();

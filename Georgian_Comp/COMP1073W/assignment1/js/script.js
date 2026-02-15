@@ -18,6 +18,10 @@ const btn3 = document.getElementById("btn3");
 const btn4 = document.getElementById("btn4");
 const btn5 = document.getElementById("btn5");
 
+const tellStoryBtn = document.getElementById("tellStoryBtn");
+const storyText = document.getElementById("storyText");
+
+
 function updateUI() {
   val1.textContent = part1[i1];
   val2.textContent = part2[i2];
@@ -25,6 +29,15 @@ function updateUI() {
   val4.textContent = part4[i4];
   val5.textContent = part5[i5];
 }
+
+function buildStory() {
+  return `${part1[i1]} ${part2[i2]} ${part3[i3]} ${part4[i4]} ${part5[i5]}`;
+}
+
+function showStory(text) {
+  storyText.textContent = text;
+}
+
 
 function cycleIndex(current, length) {
   return (current + 1) % length;
@@ -55,5 +68,8 @@ btn5.addEventListener("click", () => {
   updateUI();
 });
 
+tellStoryBtn.addEventListener("click", () => {
+  showStory(buildStory());
+});
 
 updateUI();

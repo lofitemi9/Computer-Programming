@@ -26,11 +26,34 @@ function updateUI() {
   val5.textContent = part5[i5];
 }
 
-// still just testing clicks for now
-btn1.addEventListener("click", () => console.log("btn1 clicked"));
-btn2.addEventListener("click", () => console.log("btn2 clicked"));
-btn3.addEventListener("click", () => console.log("btn3 clicked"));
-btn4.addEventListener("click", () => console.log("btn4 clicked"));
-btn5.addEventListener("click", () => console.log("btn5 clicked"));
+function cycleIndex(current, length) {
+  return (current + 1) % length;
+}
+
+btn1.addEventListener("click", () => {
+  i1 = cycleIndex(i1, part1.length);
+  updateUI();
+});
+
+btn2.addEventListener("click", () => {
+  i2 = cycleIndex(i2, part2.length);
+  updateUI();
+});
+
+btn3.addEventListener("click", () => {
+  i3 = cycleIndex(i3, part3.length);
+  updateUI();
+});
+
+btn4.addEventListener("click", () => {
+  i4 = cycleIndex(i4, part4.length);
+  updateUI();
+});
+
+btn5.addEventListener("click", () => {
+  i5 = cycleIndex(i5, part5.length);
+  updateUI();
+});
+
 
 updateUI();
